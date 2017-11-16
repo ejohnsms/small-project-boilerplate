@@ -804,7 +804,10 @@
     "mocha": "^4.0.1"
   },
   "scripts": {
-    "test": "mocha --require babel-register"
+    "lint": "./node_modules/.bin/eslint",
+    "test": "./node_modules/.bin/mocha --require babel-register",
+    "build": "./node_modules/.bin/webpack --progress --color",
+    "serve": "./node_modules/.bin/webpack-dev-server --progress"
   },
   "repository": {
     "type": "git",
