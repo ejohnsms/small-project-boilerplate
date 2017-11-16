@@ -7,6 +7,9 @@
     "test": "test"
   },
   "scripts": {
+    "build": "webpack --progress --color",
+    "lint": "eslint ./src/** ./test/** --color",
+    "serve": "webpack-dev-server --progress",
     "test": "mocha --require babel-register"
   },
   "repository": {
