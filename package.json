@@ -1,7 +1,7 @@
 {
   "name": "small-project-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "scaffolding for a small web based project",
   "main": "./src/app.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
