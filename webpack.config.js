@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -22,7 +23,7 @@ module.exports = {
         enforce: 'pre',
         test: /.jsx?$/,
         include: [
-          path.resolve(__dirname, 'app'),
+          path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test')
         ],
         exclude: /(node_modules | bower_components)/,
@@ -52,6 +53,13 @@ module.exports = {
         use: {
           loader: 'mocha-loader'
         }
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [ 'css-loader' ]
+        })
       }
     ]
   },
@@ -71,18 +79,19 @@ module.exports = {
       title: 'Development',
       inject: 'body',
       chunks: ['app'],
-      template: './templates/index.ejs',
-      filename: 'index.html',
-      css: './styles/index.css'
+      template: '!!ejs-compiled-loader!./templates/index.ejs',
+      filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
       title: 'Test',
       inject: 'body',
       chunks: ['test'],
-      template: './templates/index.Spec.ejs',
-      filename: 'index.spec.html',
-      css: './styles/test.css'
+      template: '!!ejs-compiled-loader!./templates/index.Spec.ejs',
+      filename: 'index.spec.html'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin({
+      filename: '[name].css'
+    })
   ]
 }

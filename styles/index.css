@@ -1,0 +1,64 @@
+.title, .caption {
+  color: #03a9f4;
+}
+
+.hidden {
+  display: none;
+}
+
+.topics {
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.topics li {
+  list-style-type: circle;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.content-wrapper {
+  height: 500px;
+  width: 650px;
+  position: relative;
+}
+
+.slide-container {
+  height: 300px;
+  width: 450px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.btn {
+  background-color: #c3fffa;
+  min-width: 50px;
+  font-size: 18px;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+.btn:hover {
+  background-color: #03a9f4;
+  cursor: pointer;
+}
+
+.btn-next {
+  margin-left: 10px;
+}
+
+.btn-prev {
+  margin-right: 10px;
+}

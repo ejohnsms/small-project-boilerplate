@@ -1,4 +1,5 @@
 import assert from 'assert';
+import '../styles/index.spec.css';
 
 describe('Array', () => {
   describe('#indexOf()', () => {

@@ -3,21 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="app.css">
   </head>
   <body>
     <nav class="menu">
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="index.spec.html">tests</a></li>
-      </ul>
+      <% include partials/nav %>
     </nav>
-    <main>
-      <div class="content">
+    <main class="content-wrapper">
+  		<div class="slide-container">
 
+  		</div>
+  	</main>
+
+  	<footer>
+  		<div class="button-container">
+  			<button name="prev-button" class="btn btn-prev hidden">previous</button><button name="next-button" class="btn btn-next hidden">next</button>
+  		</div>
+  	</footer>
+  	<!-- in the css files add the background image for the basic slide -->
+  	<template id="interstitial">
+          <img class="big-image center" />
+          <h1 class="caption"></h1>
+    </template>
+
+  	<!-- in the css files add the background image for the basic slide -->
+  	<template id="basic">
+          <h1 class="title"></h1>
+          <p class="description"></p>
+          <!-- insert an li for each topic -->
+          <ul class="topics">
+          </ul>
+    </template>
+
+  	<!-- in the css files add the background image for the basic slide -->
+  	<template id="dankmeme">
+      <h1 class="title"></h1>
+      <div class="code-with-comments">
+          <!-- insert an li for each topic -->
+          <ul class="topics">
+          </ul>
+          <img class="code-image right" />
       </div>
-    </main>
-    <div id="root">
-    <canvas id="viewport" width="640" height="480"></canvas>
-    </div>
+    </template>
   </body>
 </html>

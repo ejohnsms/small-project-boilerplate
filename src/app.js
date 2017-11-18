@@ -1,3 +1,4 @@
+import '../styles/index.css';
 // this is the entry point for the app
 if (document.readyState === 'complete' ||
     document.readyState === 'loaded' ||
