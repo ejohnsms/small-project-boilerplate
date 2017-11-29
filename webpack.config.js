@@ -76,7 +76,7 @@ module.exports = {
       sourceMap: true
     }),
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Slope Sample Project',
       inject: 'body',
       chunks: ['app'],
       template: '!!ejs-compiled-loader!./templates/index.ejs',
