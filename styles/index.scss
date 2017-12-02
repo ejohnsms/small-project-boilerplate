@@ -1,0 +1,36 @@
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.main-nav {
+  float: right;
+  padding: 42px 0 0 30px;
+}
+
+ul.main-nav {
+  list-style: none;
+  text-decoration: none;
+}
+
+.main-nav li {
+  float: left;
+  margin: 0 0 0 5px;
+}
+
+.main-nav li a {
+  border-radius: 14px;
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  padding: 5px 15px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.main-nav li a:hover,
+.main-nav li a:focus {
+  color: #fff;
+  color: rgba(255, 255, 255, 0.15);
+}
