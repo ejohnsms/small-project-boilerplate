@@ -62,7 +62,25 @@ module.exports = {
             //resolve-url-loader may be chained before sass-loader if necessary
             use: ['css-loader', 'postcss-loader', 'sass-loader']
           })
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]'
+            }
+          }
+        ]
       }
+      // {
+      //   test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+      //   loader: 'url-loader',
+      //   options: {
+      //     limit: 10000
+      //   }
+      // }
     ]
   },
   devtool: 'source-map',

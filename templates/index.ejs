@@ -10,11 +10,22 @@
     <nav>
       <% include partials/nav %>
     </nav>
-    <main>
+    <main class="clearfix">
+      <% include partials/gallery %>
   		<div id="root" class="content">
 
   		</div>
   	</main>
+
+    <form id="subscription" class="" action="index.html" method="post">
+      <fieldset>
+        <label for="userEmail">email</label>
+        <input id="userEmail" type="email" name="" value="" />
+      </fieldset>
+      <fieldset>
+        <input type="submit" name="" value="subscribe">
+      </fieldset>
+    </form>
 
   	<footer>
   	</footer>

@@ -1,4 +1,7 @@
 import '../styles/index.scss';
+import '../img/short_cap.jpg';
+import '../img/short_cap2.jpg';
+
 // this is the entry point for the app
 if (document.readyState === 'complete' ||
     document.readyState === 'loaded' ||
